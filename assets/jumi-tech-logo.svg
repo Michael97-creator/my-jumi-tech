@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 296 76" role="img" aria-labelledby="title desc">
+<title id="title">Jumi Tech</title><desc id="desc">Jumi Tech premium technology company logo</desc>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#62e6ff"/><stop offset="1" stop-color="#8d6bff"/></linearGradient></defs>
+<rect x="3" y="3" width="70" height="70" rx="20" fill="#0b1221" stroke="url(#g)" stroke-width="3"/>
+<path d="M23 24v25c0 8 5 12 13 12s13-4 13-12V24" fill="none" stroke="url(#g)" stroke-width="7" stroke-linecap="round"/>
+<path d="M58 25v35M51 25h14" fill="none" stroke="#edf6ff" stroke-width="5" stroke-linecap="round"/>
+<path d="M24 17h29" stroke="#edf6ff" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+<text x="88" y="47" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800" fill="#edf6ff" letter-spacing="1">JUMI</text>
+<text x="171" y="47" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800" fill="#62e6ff" letter-spacing="1">TECH</text>
+<circle cx="281" cy="18" r="3" fill="#8d6bff"/>
+</svg>
