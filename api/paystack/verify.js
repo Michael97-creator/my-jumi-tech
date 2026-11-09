@@ -20,6 +20,6 @@ export default async function handler(req,res){
     await sql`UPDATE academy_registrations SET amount_paid=${totalPaid},payment_status=${paymentStatus},registration_status='registered',updated_at=NOW() WHERE id=${p.registration_id}`;
     const final=await sql`SELECT id,full_name,courses,tuition_total,amount_paid,payment_status,registration_status FROM academy_registrations WHERE id=${p.registration_id} LIMIT 1`;
     const r=final[0];
-    return json(res,200,{status:'success',message:'Payment verified successfully.',registration:{id:r.id,name:r.full_name,courses:r.courses,tuition_total:Number(r.tuition_total)/100,amount_paid:Number(r.amount_paid)/100,balance_due:(Number(r.tuition_total)-Number(r.amount_paid))/100,payment_status:r.payment_status,registration_status:r.registration_status}});
+    return json(res,200,{status:'success',message:'Payment verified successfully.',payment_amount:Number(p.amount)/100,currency:p.currency,registration:{id:r.id,name:r.full_name,courses:r.courses,tuition_total:Number(r.tuition_total)/100,amount_paid:Number(r.amount_paid)/100,balance_due:(Number(r.tuition_total)-Number(r.amount_paid))/100,payment_status:r.payment_status,registration_status:r.registration_status}});
   } catch(err) { console.error('Paystack verification error:',err); return json(res,500,{status:'error',message:'Payment verification is temporarily unavailable. Please keep your reference and try again.'}); }
 }
